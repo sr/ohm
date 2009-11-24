@@ -59,8 +59,8 @@ class TestRedis < Test::Unit::TestCase
       assert_equal "2", event2.id
     end
 
-    should "return the unsaved object if validation fails" do
-      assert Person.create(:name => nil).kind_of?(Person)
+    should "return nil if validation fails" do
+      assert_nil Person.create(:name => nil)
     end
   end
 

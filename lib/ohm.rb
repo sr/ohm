@@ -485,7 +485,7 @@ module Ohm
 
     def self.create(*args)
       model = new(*args)
-      model.create
+      return unless model.create
       model
     end
 
